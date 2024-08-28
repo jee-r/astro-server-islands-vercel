@@ -1,0 +1,14 @@
+---
+
+const now = new Date()
+console.log(Astro.url)
+const refererStr = Astro.request.headers.get("Referer")
+if(refererStr) {
+
+    const refererURL = new URL(refererStr)
+    console.log('Referer', refererURL)
+}
+
+---
+
+<h2> { now } </h2>
